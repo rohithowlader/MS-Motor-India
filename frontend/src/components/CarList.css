@@ -1,10 +1,27 @@
+/* Full‑page background colour */
+body {
+  background: linear-gradient(90deg, #b6d7f8 0%, #014483 100%) !important;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Card styling with blur + zoom */
 .zoom-card {
+  backdrop-filter: blur(8px) !important; /* blur the content behind the card */
+  background: rgba(255, 255, 255, 0.3) !important; /* semi‑transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* subtle initial shadow */
+  border-radius: 15px;
+
+  /* your new zoom behaviour */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
+/* Hover effect */
 .zoom-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  transform: scale(1.05); /* zoom a bit more */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* deeper shadow while hovered */
+  z-index: 2; /* keep hovered card on top */
 }

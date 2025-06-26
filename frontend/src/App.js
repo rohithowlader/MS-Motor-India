@@ -50,6 +50,7 @@ const App = () => {
         backdrop={true}
         scroll={true}
         className="bg-dark text-white"
+        style={{ width: 200 }} // 👈 fixed width
       >
         <Offcanvas.Header closeButton closeVariant="white">
           <Offcanvas.Title>Navigation</Offcanvas.Title>
